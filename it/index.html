@@ -11,40 +11,66 @@
   .updated { color: #666; font-size: 0.9rem; }
   a { color: #2e7d32; }
   .lang-switch { text-align: right; font-size: 0.9rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; vertical-align: top; }
+  @media (prefers-color-scheme: dark) { body { background: #121212; color: #e6e6e6; } th, td { border-color: #444; } .updated { color: #aaa; } a { color: #81c784; } }
 </style>
 </head>
 <body>
 <p class="lang-switch"><a href="../en/">English version</a></p>
 <h1>Informativa sulla privacy di Dispensina Digitale</h1>
-<p class="updated">Ultimo aggiornamento: 25 agosto 2026</p>
+<p class="updated">Ultimo aggiornamento: 15 novembre 2026</p>
 
-<p>Dispensina Digitale è un'applicazione per la gestione della dispensa domestica. Questa informativa descrive quali dati vengono trattati e come.</p>
+<p>Dispensina Digitale è un'applicazione per la gestione della dispensa domestica, disponibile come app Android e come web app (anche installabile su iPhone e iPad). Questa informativa descrive quali dati vengono trattati, perché e come puoi controllarli.</p>
 
-<h2>Nessun account, nessun server</h2>
-<p>Dispensina Digitale non richiede la creazione di un account e non dispone di un proprio server. Tutti i dati che inserisci (prodotti, categorie, lista della spesa, preferenze) vengono salvati esclusivamente sul tuo dispositivo, in locale. Nessun dato personale viene raccolto, trasmesso o condiviso con l'sviluppatore o con terze parti.</p>
+<h2>Titolare del trattamento e contatti</h2>
+<p>Il titolare è lo sviluppatore di Dispensina Digitale, contattabile a: <a href="mailto:marco.p.develop@gmail.com">marco.p.develop@gmail.com</a>.</p>
 
-<h2>Fotocamera</h2>
-<p>L'app richiede l'accesso alla fotocamera solo per la funzione facoltativa di scansione dei codici a barre, usata per compilare più velocemente i dati di un prodotto. Le immagini riprese dalla fotocamera vengono elaborate esclusivamente sul dispositivo (tramite Google ML Kit, on-device) e non vengono mai salvate, trasmesse o caricate online.</p>
+<h2>Account</h2>
+<p>Per usare l'app crei un account con <strong>indirizzo email e password</strong>. La password viene gestita dal servizio di autenticazione e non è mai visibile allo sviluppatore. La parte dell'email prima della "@" viene usata come nome visibile agli altri membri della tua dispensa, se la condividi.</p>
+
+<h2>Dati della dispensa</h2>
+<p>I dati che inserisci (prodotti, quantità, date di scadenza, prezzi facoltativi, categorie personalizzate, lista della spesa, codici a barre già usati) vengono salvati sul tuo dispositivo e, in copia, nel tuo spazio online, così li ritrovi su altri dispositivi e puoi condividerli. Le tue preferenze (tema, orario e tipo di notifiche, fuso orario) sono salvate nel tuo profilo e non sono visibili agli altri membri.</p>
+
+<h2>Dispensa condivisa</h2>
+<p>Se condividi la tua dispensa tramite codice invito, le persone che entrano possono vedere e modificare i prodotti e la lista della spesa, e vedono il nome visibile dei membri. Il proprietario può togliere un membro o generare un nuovo codice; ogni membro può uscire in qualsiasi momento.</p>
 
 <h2>Notifiche</h2>
-<p>Se attivi le notifiche di scadenza, l'app pianifica notifiche locali generate direttamente sul dispositivo, per ricordarti quando un prodotto sta per scadere. Queste notifiche non richiedono connessione a internet e non utilizzano servizi di terze parti (nessun Firebase Cloud Messaging).</p>
+<p>Sull'app Android le notifiche di scadenza e scorte basse sono generate e pianificate direttamente sul dispositivo. Nella web app, se attivi le notifiche, il browser registra un'iscrizione alle notifiche push (un indirizzo tecnico fornito dal servizio push del browser, ad esempio Apple, Google o Microsoft) che viene salvata nel tuo profilo e usata solo per inviarti gli avvisi che hai scelto e quelli sui prodotti aggiunti da altri membri della tua dispensa. Il contenuto delle notifiche (es. nomi dei prodotti) transita cifrato attraverso il servizio push del browser.</p>
 
-<h2>Connessione a Open Food Facts</h2>
-<p>Quando scansioni un codice a barre non ancora presente nella cache locale dei prodotti già inseriti, e solo se il dispositivo è online, l'app può interrogare il database pubblico e gratuito <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener noreferrer">Open Food Facts</a> per recuperare automaticamente nome e informazioni del prodotto associato a quel codice a barre. In questa richiesta viene trasmesso esclusivamente il codice a barre scansionato: nessun altro dato personale o identificativo dell'utente viene inviato. Se il dispositivo è offline o il prodotto non viene trovato, puoi comunque completare l'inserimento manualmente.</p>
+<h2>Dati di utilizzo ed errori</h2>
+<p>Per migliorare l'app e correggere i problemi, vengono registrati eventi tecnici di utilizzo <strong>senza il contenuto della dispensa</strong> (ad esempio: accesso effettuato, prodotto aggiunto, notifiche attivate), insieme alla piattaforma (Android, iPhone, web), alla versione dell'app, alla data e al tuo nome utente, e gli eventuali errori dell'app (messaggio tecnico e schermata in cui si sono verificati). Questi dati sono consultabili solo dallo sviluppatore, che li riceve anche tramite un canale privato di notifica (Telegram), e sono conservati per un massimo di 12 mesi.</p>
 
-<h2>Backup ed esportazione dati</h2>
-<p>Puoi esportare in qualsiasi momento un file di backup in formato JSON contenente i tuoi dati, che resta sotto il tuo esclusivo controllo (puoi salvarlo o condividerlo come preferisci). L'app crea inoltre automaticamente, a ogni avvio, un backup interno di sicurezza salvato localmente sul dispositivo, mai caricato altrove.</p>
+<h2>Dove sono conservati i dati e chi li tratta</h2>
+<table>
+  <tr><th>Fornitore</th><th>Ruolo</th><th>Dati</th></tr>
+  <tr><td>Supabase (server nell'Unione Europea, Irlanda)</td><td>Database, autenticazione e funzioni server</td><td>Account, dispensa, preferenze, iscrizioni push, dati di utilizzo ed errori</td></tr>
+  <tr><td>Servizio push del browser (Apple, Google, Microsoft, Mozilla)</td><td>Consegna delle notifiche nella web app</td><td>Contenuto cifrato delle notifiche</td></tr>
+  <tr><td>Telegram</td><td>Canale privato con cui lo sviluppatore riceve eventi ed errori</td><td>Tipo di evento, piattaforma, nome utente, messaggi di errore</td></tr>
+  <tr><td>GitHub Pages</td><td>Pubblicazione della web app</td><td>Dati tecnici di connessione (es. indirizzo IP) gestiti da GitHub</td></tr>
+  <tr><td>Open Food Facts</td><td>Ricerca facoltativa dei prodotti da codice a barre</td><td>Solo il codice a barre scansionato</td></tr>
+</table>
+<p>I dati viaggiano sempre cifrati (HTTPS). Le regole del database impediscono a chiunque di leggere o modificare la dispensa di un altro utente, a meno che non ne sia membro.</p>
 
-<h2>Pubblicità e tracciamento</h2>
-<p>Dispensina Digitale non contiene pubblicità, strumenti di profilazione, analytics di terze parti né tracker pubblicitari.</p>
+<h2>Fotocamera</h2>
+<p>Sull'app Android la fotocamera è usata solo per la scansione facoltativa dei codici a barre. Le immagini vengono elaborate esclusivamente sul dispositivo (Google ML Kit, on-device) e non vengono mai salvate né trasmesse.</p>
+
+<h2>Backup ed esportazione</h2>
+<p>Puoi esportare in qualsiasi momento un file di backup in formato JSON, che resta sotto il tuo esclusivo controllo. L'app crea anche un backup interno di sicurezza sul dispositivo.</p>
+
+<h2>Base giuridica e conservazione</h2>
+<p>I dati dell'account e della dispensa sono trattati per fornirti il servizio che hai richiesto e sono conservati finché mantieni l'account. I dati di utilizzo e degli errori sono trattati sulla base del legittimo interesse dello sviluppatore a mantenere l'app funzionante e sicura, e sono conservati per un massimo di 12 mesi.</p>
+
+<h2 id="eliminazione-account">I tuoi diritti ed eliminazione dell'account</h2>
+<p>Puoi eliminare il tuo account in qualsiasi momento dall'app: <strong>Impostazioni → Account → Elimina account</strong>. Vengono cancellati account, preferenze e iscrizioni alle notifiche; la dispensa viene eliminata se non ha altri membri, altrimenti resta agli altri membri. Se non riesci ad accedere all'app puoi chiedere l'eliminazione scrivendo a <a href="mailto:marco.p.develop@gmail.com">marco.p.develop@gmail.com</a> dall'indirizzo email dell'account. Hai inoltre diritto di accesso, rettifica, limitazione, opposizione e portabilità dei dati (anche tramite l'esportazione del backup) e di proporre reclamo al Garante per la protezione dei dati personali.</p>
+
+<h2>Pubblicità</h2>
+<p>Dispensina Digitale non contiene pubblicità, non vende dati e non usa tracker pubblicitari né strumenti di profilazione di terze parti.</p>
 
 <h2>Minori</h2>
-<p>L'app non è rivolta specificamente a minori di 13 anni e non raccoglie consapevolmente dati che possano identificare un minore, in quanto non raccoglie dati personali di alcun tipo.</p>
+<p>L'app non è rivolta a minori di 14 anni.</p>
 
 <h2>Modifiche a questa informativa</h2>
-<p>Eventuali modifiche future a questa informativa saranno pubblicate su questa stessa pagina, con indicazione della data di aggiornamento.</p>
-
-<h2>Contatti</h2>
-<p>Per domande su questa informativa puoi scrivere a: <a href="mailto:marco.p.develop@gmail.com">marco.p.develop@gmail.com</a></p>
+<p>Eventuali modifiche saranno pubblicate su questa pagina, con la data di aggiornamento.</p>
 </body>
 </html>

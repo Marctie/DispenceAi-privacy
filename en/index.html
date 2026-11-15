@@ -11,40 +11,66 @@
   .updated { color: #666; font-size: 0.9rem; }
   a { color: #2e7d32; }
   .lang-switch { text-align: right; font-size: 0.9rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; vertical-align: top; }
+  @media (prefers-color-scheme: dark) { body { background: #121212; color: #e6e6e6; } th, td { border-color: #444; } .updated { color: #aaa; } a { color: #81c784; } }
 </style>
 </head>
 <body>
 <p class="lang-switch"><a href="../it/">Versione italiana</a></p>
-<h1>Dispensina Digitale — Privacy Policy</h1>
-<p class="updated">Last updated: August 25, 2026</p>
+<h1>Dispensina Digitale Privacy Policy</h1>
+<p class="updated">Last updated: November 15, 2026</p>
 
-<p>Dispensina Digitale is an app for managing your home pantry inventory. This policy explains what data is processed and how.</p>
+<p>Dispensina Digitale is a home pantry management app, available as an Android app and as a web app (which can also be installed on iPhone and iPad). This policy explains what data is processed, why, and how you can control it.</p>
 
-<h2>No account, no server</h2>
-<p>Dispensina Digitale does not require account creation and has no backend server of its own. All data you enter (products, categories, shopping list, preferences) is stored exclusively on your device, locally. No personal data is collected, transmitted, or shared with the developer or any third party.</p>
+<h2>Controller and contact</h2>
+<p>The controller is the developer of Dispensina Digitale, reachable at: <a href="mailto:marco.p.develop@gmail.com">marco.p.develop@gmail.com</a>.</p>
 
-<h2>Camera</h2>
-<p>The app requests camera access only for the optional barcode scanning feature, used to speed up adding products. Camera images are processed entirely on-device (via Google ML Kit) and are never saved, transmitted, or uploaded anywhere.</p>
+<h2>Account</h2>
+<p>To use the app you create an account with an <strong>email address and password</strong>. The password is handled by the authentication service and is never visible to the developer. The part of your email before the "@" is used as your display name for other members of your pantry, if you share it.</p>
+
+<h2>Pantry data</h2>
+<p>The data you enter (products, quantities, expiry dates, optional prices, custom categories, shopping list, previously used barcodes) is stored on your device and, as a copy, in your online space, so you can access it from other devices and share it. Your preferences (theme, notification time and types, time zone) are stored in your profile and are not visible to other members.</p>
+
+<h2>Shared pantry</h2>
+<p>If you share your pantry with an invite code, the people who join can view and edit the products and the shopping list, and can see members' display names. The owner can remove a member or generate a new code; any member can leave at any time.</p>
 
 <h2>Notifications</h2>
-<p>If you enable expiry notifications, the app schedules local notifications generated directly on your device to remind you when a product is about to expire. These notifications require no internet connection and use no third-party service (no Firebase Cloud Messaging).</p>
+<p>In the Android app, expiry and low-stock notifications are generated and scheduled on the device. In the web app, if you enable notifications, your browser registers a push subscription (a technical address provided by the browser's push service, e.g. Apple, Google or Microsoft), which is stored in your profile and used only to send you the alerts you chose and alerts about products added by other members of your pantry. Notification content (e.g. product names) travels encrypted through the browser's push service.</p>
 
-<h2>Open Food Facts lookup</h2>
-<p>When you scan a barcode that isn't already in your local cache of previously entered products, and only if your device is online, the app may query the free, public <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener noreferrer">Open Food Facts</a> database to automatically retrieve the product name and details for that barcode. Only the scanned barcode number is sent in this request — no other personal or identifying data is transmitted. If you're offline or the product isn't found, you can still complete the entry manually.</p>
+<h2>Usage data and errors</h2>
+<p>To improve the app and fix problems, technical usage events are recorded <strong>without the content of your pantry</strong> (for example: signed in, product added, notifications enabled), together with the platform (Android, iPhone, web), app version, date and your username, as well as any app errors (technical message and the screen where they occurred). This data can only be accessed by the developer, who also receives it through a private notification channel (Telegram), and is kept for at most 12 months.</p>
 
-<h2>Backup and data export</h2>
-<p>You can export a JSON backup file of your data at any time; it stays entirely under your control (save or share it as you wish). The app also automatically creates a silent internal safety backup on every launch, stored locally on the device and never uploaded anywhere.</p>
+<h2>Where data is stored and who processes it</h2>
+<table>
+  <tr><th>Provider</th><th>Role</th><th>Data</th></tr>
+  <tr><td>Supabase (servers in the European Union, Ireland)</td><td>Database, authentication and server functions</td><td>Account, pantry, preferences, push subscriptions, usage data and errors</td></tr>
+  <tr><td>Browser push service (Apple, Google, Microsoft, Mozilla)</td><td>Delivering web app notifications</td><td>Encrypted notification content</td></tr>
+  <tr><td>Telegram</td><td>Private channel used by the developer to receive events and errors</td><td>Event type, platform, username, error messages</td></tr>
+  <tr><td>GitHub Pages</td><td>Hosting the web app</td><td>Technical connection data (e.g. IP address) handled by GitHub</td></tr>
+  <tr><td>Open Food Facts</td><td>Optional product lookup by barcode</td><td>Only the scanned barcode</td></tr>
+</table>
+<p>Data is always transmitted encrypted (HTTPS). Database rules prevent anyone from reading or editing another user's pantry unless they are a member of it.</p>
 
-<h2>Advertising and tracking</h2>
-<p>Dispensina Digitale contains no advertising, no profiling tools, no third-party analytics, and no advertising trackers.</p>
+<h2>Camera</h2>
+<p>In the Android app the camera is used only for optional barcode scanning. Images are processed exclusively on the device (Google ML Kit, on-device) and are never stored or transmitted.</p>
+
+<h2>Backup and export</h2>
+<p>You can export a JSON backup file at any time, which remains under your sole control. The app also keeps an internal safety backup on the device.</p>
+
+<h2>Legal basis and retention</h2>
+<p>Account and pantry data are processed to provide the service you requested and are kept as long as you keep your account. Usage and error data are processed on the basis of the developer's legitimate interest in keeping the app working and secure, and are kept for at most 12 months.</p>
+
+<h2 id="account-deletion">Your rights and account deletion</h2>
+<p>You can delete your account at any time from the app: <strong>Settings → Account → Delete account</strong>. Your account, preferences and notification subscriptions are deleted; the pantry is deleted if it has no other members, otherwise it remains with the other members. If you cannot access the app you can request deletion by writing to <a href="mailto:marco.p.develop@gmail.com">marco.p.develop@gmail.com</a> from your account's email address. You also have the right to access, rectify, restrict, object to and port your data (including via the backup export), and to lodge a complaint with your data protection authority.</p>
+
+<h2>Advertising</h2>
+<p>Dispensina Digitale contains no ads, does not sell data and does not use advertising trackers or third-party profiling tools.</p>
 
 <h2>Children</h2>
-<p>The app is not specifically directed at children under 13 and does not knowingly collect data that could identify a minor, as it does not collect any personal data at all.</p>
+<p>The app is not directed at children under 14.</p>
 
 <h2>Changes to this policy</h2>
-<p>Any future changes to this policy will be published on this same page, with an updated revision date.</p>
-
-<h2>Contact</h2>
-<p>For questions about this policy, contact: <a href="mailto:marco.p.develop@gmail.com">marco.p.develop@gmail.com</a></p>
+<p>Any changes will be published on this page with the update date.</p>
 </body>
 </html>
